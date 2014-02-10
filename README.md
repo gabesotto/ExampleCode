@@ -21,7 +21,7 @@ graph is a polygon, and also if that polygon is convex or concave.
 A simple sorting program that implements a recursive merge sort.
 
 ---Graph--- (C++)
-A simple C++ class that represents a graph class through an adjacency
+A simple C++ class that represents a graph data structure through an adjacency
 matrix. 
 
 
