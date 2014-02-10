@@ -5,8 +5,24 @@ public class Life{
 	
 	//Constructor
 	public Life(int[][] board){
-		//TODO: check that board is square.
-		//TODO: check that board is only 0 or 1.
+		
+		//Input check
+		for(int i = 0; i < board.length; i++){
+			
+			//check that input is 'square'
+			if(board[i].length != board.length){
+				throw new IllegalArgumentException("Input 2d Array is not 'square'.");
+			}
+			
+			for(int j = 0; j < board[0].length; j++){
+				
+				//check that input has only 1's and zero's
+				if(board[i][j] != 1 && board[i][j] != 0){
+					throw new IllegalArgumentException("Input 2d Array contains values other than 1's and 0's");
+				}
+			}
+		}
+		
 		this.board = board;
 	}
 	
@@ -30,26 +46,22 @@ public class Life{
 				if(board[i][j] == 1){
 						
 					//under pop
-					if(neighbors < 2){ 
+					if(neighbors < 2)
 						succesors[i][j] = 0;
-					}
 					
 					//survival
-					if(neighbors == 2 || neighbors == 3){ 
+					if(neighbors == 2 || neighbors == 3) 
 						succesors[i][j] = 1;
-					}
 					
 					//over-crowding
-					if(neighbors > 3){ 
+					if(neighbors > 3)
 						succesors[i][j] = 0;
-					}
 				
 				//Dead Cell
 				}else{
 					//reproduction
-					if(neighbors == 3){
+					if(neighbors == 3)
 						succesors[i][j] = 1;
-					}
 				}
 				
 			}

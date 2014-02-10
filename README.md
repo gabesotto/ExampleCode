@@ -2,7 +2,6 @@ ExampleCode
 ===========
 
 Some simple code examples to show C, C++, Java, and C socket programming coding styles.
-In order of complexity from most to least:
 
 ---Sliding Window--- (C)
 A go-back-n sliding window protocol implemenation using sockets in C.
@@ -24,6 +23,8 @@ A simple sorting program that implements a recursive merge sort.
 A simple C++ class that represents a graph data structure through an adjacency
 matrix. 
 
+---Conway's Game of Life---(Java)
+A java class that simulates Conway's game of life. 
 
 
 
